@@ -1,9 +1,9 @@
-name: Pre-commit
+name: Build and Test
 
 on: [push]
 
 jobs:
-  linting:
+  build_and_test:
     runs-on: windows-latest
     strategy:
       matrix:
@@ -20,3 +20,9 @@ jobs:
         pip install -r requirements.txt
         pip install -e .
         pytest
+    - name: Upload Coverage report
+      uses: actions/upload-artifact@v4
+      with:
+        name: my-artifact
+        path: cov.html
+        retention-days: 5
