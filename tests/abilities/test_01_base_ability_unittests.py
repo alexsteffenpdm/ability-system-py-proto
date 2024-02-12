@@ -117,6 +117,6 @@ def test_hit(basic_ability):
     # hit other actor
     other_actor = Actor([2, 2, 2], 0.1)
 
-    assert basic_ability.hit(other_actor) is False
+    assert not basic_ability.hit(other_actor)
     basic_ability.tick()
-    assert basic_ability.hit(other_actor) is True
+    assert basic_ability.hit(other_actor)
