@@ -1,0 +1,11 @@
+[project]
+name = "py-ability-proto"
+version = "0.1.0"
+description = "My small project"
+
+[build-system]
+build-backend = "flit_core.buildapi"
+requires = ["flit_core >=3.2,<4"]
+
+[tool.pytest.ini_options]
+addopts = "--cov=py_ability_proto --cov-report term-missing"
