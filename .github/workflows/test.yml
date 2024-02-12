@@ -24,5 +24,5 @@ jobs:
       uses: actions/upload-artifact@v4
       with:
         name: my-artifact
-        path: cov.html
+        path: py_ability_proto\tests\coverage
         retention-days: 5
